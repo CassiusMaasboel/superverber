@@ -34,12 +34,6 @@ header {
     gap: 20px;
 }
 
-header img {
-    height: 70px;
-    widht: auto;
-    max-width: 100%;
-}
-
 /* Main Section Styling */
 main {
     background: rgb(255, 255, 255);
