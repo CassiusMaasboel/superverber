@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>superverber | </title>
+    <link rel="stylesheet" href="css/questions.css">
+    <link href="https://unpkg.com/boxicons/css/boxicons.min.css" rel="stylesheet">
+    <link rel="icon" type="image/png" sizes="16x16" href="fav-pointed-star.png">
+</head>
+<body>
+    <header>
+        <h1><span id="verb-name"></span> : <span id="tense-name"></span></h1>
+    </header>
+    <main>
+        <section class="exercise-section">
+            <div id="questions-container">
+                <div class="question">
+                    <div class="task-number">
+                        <span id="task-number"></span>
+                    </div>
+                    <div id="text">
+                        <p id="danish-text"></p>
+                        <div class="input-row">
+                            <p id="question-text">je</p>
+                            <div class="inputs">
+                                <input 
+                                    type="text" 
+                                    id="verb-input" 
+                                    class="input-box" 
+                                    placeholder="Skriv her..." 
+                                    autocomplete="off" 
+                                    autocorrect="off" 
+                                    spellcheck="false" 
+                                />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="feedback-container">
+                    <button id="check-answer">tjek</button>
+                    <div id="error-icon-container" class="hidden">
+                        <i class="bx bx-x error-icon"></i>
+                        <span class="error-text">forkert, prøv igen!</span>
+                    </div>
+                    <div id="success-icon-container" class="hidden">
+                        <i class="bx bx-check success-icon"></i>
+                        <span class="success-text">korrekt</span>
+                    </div>
+                </div>                
+            </div>
+        </section>
+    </main>
+    <script src="js/questions.js" defer></script>
+    <script src="js/script.js"></script>
+
+</body>
+</html>

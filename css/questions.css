@@ -1,0 +1,258 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+/* General Body Setup */
+body {
+    font-family: "Poppins", sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+    color: #333;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
+}
+
+/* Header Styling */
+header {
+    background-color: #f9f9f9;
+    color: #000000;
+    padding: 20px;
+    width: 100%;
+    text-align: center;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+/* Main Section Styling */
+main {
+    background: rgb(255, 255, 255);
+    border-radius: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 750px;
+    height: 300px;
+    margin-top: 20px;
+    display: flex; /* Enables flex layout */
+    flex-direction: column; /* Stack children vertically */
+}
+
+/* Questions Container */
+#questions-container {
+    flex: 1; /* Allow this section to grow and take available space */
+    display: flex;
+    flex-direction: column; /* Stack elements */
+    justify-content: space-between; /* Distribute space evenly */
+
+}
+
+/* Feedback Section Styling */
+#feedback-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-self: flex-end;
+    width: 100%;
+    min-height: 60px; /* Fixed height for consistent layout */
+    background: #c1c1c1;
+    border-radius: 0 0 20px 20px; /* Match main container's border radius */
+}
+
+
+/* Task Number in Blue Circle */
+.task-number {
+    font-size: 19px;
+    font-weight: bold;
+    color: #333;
+    background-color: #f9fafb;
+    border-radius: 25px;
+    padding: 10px;
+    width: 40px;
+    height: 10px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 30px;
+}
+
+#text {
+    top: 20px;
+}
+
+/* Danish Sentence Styling */
+#danish-text {
+    font-size: 19px;
+    color: #7b7c7d;
+    margin-top: 20px;
+    margin-bottom: 40px;
+    margin-left: 25%;
+}
+
+/* Container for pronoun and input */
+.input-row {
+    display: flex; /* Placer elementerne side om side */
+    align-items: center; /* Justér lodret */
+    margin-top: 20px;
+    margin-left: 25%; /* Juster afstanden fra venstre */
+    margin-bottom: 15px;
+    gap: 7px; /* Afstand mellem pronomen og inputfelt */
+}
+
+/* Pronoun styling */
+#question-text {
+    font-size: 19px; /* Sørg for, at font-størrelsen matcher input */
+    line-height: 1.2; /* Justér line-height for korrekt lodret placering */
+    color: #000000;
+    margin: 0; /* Fjern margin for bedre justering */
+
+}
+
+/* Input Box Styling */
+.input-box {
+    width: 150px; /* Bredden af inputfeltet */
+    font-size: 20px; /* Match font-størrelsen med teksten */
+    line-height: 1.2; /* Sørg for ensartet line-height */
+    text-align: left; /* Juster tekst til venstre */
+    color: #000000; /* Tekstfarve */
+    background: transparent; /* Gør baggrunden gennemsigtig */
+    border: none; /* Fjern alle borders */
+    border-bottom: 2px solid #ccc; /* Kun en linje under feltet */
+    outline: none; /* Fjern fokusringen */
+    transition: border-color 0.3s ease-in-out;
+    padding: 2px; /* Fjern unødvendig padding */
+}
+
+/* Fremhæv linjen ved fokus */
+.input-box:focus {
+    border-bottom: 2px solid #333;
+}
+
+/* Når feltet er korrekt */
+.input-box.correct {
+    border-bottom: 2px solid #30d58c;
+}
+
+/* Når feltet er forkert */
+.input-box.incorrect {
+    border-bottom: 2px solid #fb3559;
+}
+
+/* Placeholder Styling */
+input::placeholder {
+    color: transparent;
+}
+
+input:focus::placeholder {
+    color: transparent;
+}
+
+/* Disable autofill styles */
+input:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0 1000px white inset !important;
+    -webkit-text-fill-color: #333 !important;
+}
+
+
+/* Button Styling - Placering helt til venstre */
+#check-answer {
+    background-color: #333;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 20px;
+    font-weight: 600;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.1s ease-in-out;
+    margin-left: 30px; /* Flyt knappen helt til venstre */
+    align-self: center; /* Sikrer venstrejustering */
+}
+
+#check-answer:hover {
+    background-color: #333;
+    color: white;
+}
+
+#check-answer:active {
+    transform: scale(0.95); /* Shrink effect when clicked */
+    background-color: #333;
+    color: white;
+}
+
+
+/* Feedback Section Styling */
+#feedback-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between; /* Fordel elementerne mellem venstre og højre */
+    position: relative; /* Gør det muligt at placere feedback absolut inden for denne container */
+    width: 100%;
+    height: 60px;
+    background: #f9fafb;
+    margin-top: 40px;
+    border-radius: 0 0 20px 20px; /* Match main container */
+
+}
+
+/* Icon containers for 'Forkert' and 'Korrekt' */
+#error-icon-container, #success-icon-container {
+    position: absolute; /* Gør det muligt at overlappe */
+    right: 25px; /* Placer dem 25px fra højre kant */
+    display: flex;
+    align-items: center;
+    visibility: hidden; /* Skjul dem som standard */
+}
+
+/* Visibility classes */
+#error-icon-container.visible, #success-icon-container.visible {
+    visibility: visible; /* Vis containeren når aktiv */
+}
+
+/* Error and Success Icons Styling */
+.error-icon, .success-icon {
+    font-size: 30px;
+    color: white;
+    border-radius: 50%;
+    padding: 5px;
+    margin-right: 10px;
+}
+
+.error-icon {
+    background-color: #fb3559;
+}
+
+.success-icon {
+    background-color: #30d58c;
+}
+
+/* Error and Success Text Styling */
+.error-text, .success-text {
+    font-weight: bold;
+    font-size: 18px;
+    margin: 0;
+}
+
+/* Error and Success Text Styling */
+.error-text {
+    color: red;
+    font-weight: bold;
+}
+
+.success-text {
+    color: #30d58c;
+    font-weight: bold;
+}
+
+#verb-name {
+    text-transform: lowercase;
+}
+
+.task-number.correct {
+    background-color: #30d58c; /* Green background for correct answer */
+    color: white; /* Make text white for better contrast */
+    transition: background-color 0.3s ease; /* Smooth transition */
+}
+

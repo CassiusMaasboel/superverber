@@ -1,0 +1,137 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+/* Grundopsætning */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    height: 100vh; /* Fylder hele højden af vinduet */
+    overflow: hidden;
+}
+
+/* Header Styling */
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    background-color: transparent;
+    color: #333;
+    padding: 20px;
+    width: 100%;
+    text-align: center;
+    font-size: 2rem;
+    font-weight: bold;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10; /* Sørger for at headeren ligger over indholdet */
+    gap: 20px;
+}
+
+header img {
+    height: 70px;
+}
+
+/* Main Section Styling */
+main {
+    background: rgb(255, 255, 255);
+    border-radius: 25px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 750px;
+    height: auto;
+    min-height: 400px;
+    margin-top: 25vh; /* Giver plads til headeren */
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+
+/* Tense Selection */
+.tense-selector {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 50px;
+    margin-top: 30px;
+
+}
+
+.tense-button {
+    background-color: #ffffff;
+    color: #333;
+    border: 2px solid #333;
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    font-weight: 600;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+    margin: 0 10px;
+}
+
+.tense-button:hover {
+    background-color: #333;
+    color: #fff;
+    border: 2px solid #333;
+}
+
+.tense-button.selected {
+    background-color: #333;
+    color: #ffffff;
+    border: 2px solid #333;
+}
+
+/* Verb Selection Container */
+.verb-selection {
+    width: 100%;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.verb-name {
+    margin-left: 5px;
+}
+
+/* Verb Items */
+.verb-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f9fafb;
+    font-weight: bold;
+    color: #333;
+    padding: 15px;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-bottom: 10px;
+}
+
+.verb-item:hover {
+    background-color: #333;
+    color: white;
+}
+
+.tense-button.error {
+    border: 2px solid #fb3559; /* Rød border for at vise fejl */
+    transition: 0.3s ease-in-out; /* Glat overgang */
+    color: #fb3559;
+}
+
+.tense-button.error:hover {
+    background-color: #333;
+    color: #fff;
+    border: 2px solid #333;
+
+}
+
+.verbs-container {
+    max-height: 40vh;
+    overflow-y: auto; /* Scroll hvis mange verber */
+}
