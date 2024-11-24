@@ -37,6 +37,7 @@ header {
 header img {
     height: 70px;
     widht: auto;
+    max-width: 100%;
 }
 
 /* Main Section Styling */
