@@ -215,7 +215,9 @@ document.addEventListener('DOMContentLoaded', () => {
         document.querySelector('.task-number').textContent = taskNumberMapping[pronoun];
         document.getElementById('question-text').textContent = pronounText;
         document.getElementById('verb-input').value = '';
+        
         resetFeedback();
+
     }
 
     function resetFeedback() {

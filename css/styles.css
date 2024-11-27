@@ -131,3 +131,27 @@ main {
     max-height: 40vh;
     overflow-y: auto; /* Scroll hvis mange verber */
 }
+
+@media (max-width: 800px) {
+   body {
+       height: 100vh;
+       width: 100%;
+       margin: 0; /* Fjern margin for at undgå forskydninger */
+       padding: 0;
+       display: flex;
+       justify-content: center;
+       align-items: center;
+       background-color: #f9f9f9; /* Samme baggrund */
+   }
+
+   header {
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+   }
+
+   main {
+       display: none;
+   }
+}
