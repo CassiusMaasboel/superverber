@@ -200,7 +200,7 @@ document.addEventListener('DOMContentLoaded', () => {
         let correctAnswer = selectedVerb[currentTaskIndex];
         const danishTranslation = `${danishPronouns[currentTaskIndex]} ${danishVerb}`;
 
-        document.title = `superverber | ${verbWithAccents.toLowerCase()}`;
+        document.title = `🇫🇷 superverber | ${verbWithAccents.toLowerCase()}`;
 
         // Replace "je ai" with "j'"
         let pronounText = pronoun;
